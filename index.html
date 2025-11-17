@@ -6,6 +6,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Boshen Lin – Software Engineer focused on backend, mobile, and data-driven products." />
 
+        <script>
+            (function () {
+                try {
+                    var storedTheme = localStorage.getItem("boshen-theme");
+                    var prefersLight = window.matchMedia ? window.matchMedia("(prefers-color-scheme: light)").matches : false;
+                    var themeToApply = storedTheme || (prefersLight ? "light" : null);
+                    if (themeToApply) {
+                        document.documentElement.dataset.theme = themeToApply;
+                    }
+                } catch (error) {
+                    /* Local storage might be disabled */
+                }
+            })();
+        </script>
+
         <style>
             :root {
                 --bg: #000000;
@@ -15,12 +30,79 @@
                 --fg-muted: #a1a1aa;
                 --accent: #2997ff; /* Apple 蓝 */
                 --border-subtle: #262626;
+                --body-gradient-start: #121212;
+                --nav-bg: rgba(12, 12, 12, 0.84);
+                --nav-border: rgba(63, 63, 70, 0.7);
+                --nav-link-color: #e4e4e7;
+                --nav-cta-bg: radial-gradient(circle at top, #27272a 0, #18181b 60%, #09090b 100%);
+                --nav-cta-border: rgba(63, 63, 70, 0.9);
+                --nav-cta-shadow: 0 14px 30px rgba(0, 0, 0, 0.75);
+                --ghost-bg: radial-gradient(circle at top, #18181b 0, #050509 60%);
+                --badge-bg: radial-gradient(circle at top, #18181b 0, #09090b 60%);
+                --surface-card-bg: radial-gradient(circle at top left, #18181b 0, #050509 70%);
+                --surface-card-hover-bg: radial-gradient(circle at top left, #1f2933 0, #050509 70%);
+                --surface-card-border: rgba(63, 63, 70, 0.9);
+                --surface-card-border-strong: rgba(82, 82, 91, 1);
+                --surface-solid: rgba(9, 9, 11, 0.9);
+                --timeline-divider: rgba(39, 39, 42, 0.8);
+                --hero-card-bg: radial-gradient(circle at top left, #18181b 0, #050509 60%);
+                --hero-card-border: rgba(82, 82, 91, 0.8);
+                --hero-chip-bg: rgba(15, 23, 42, 0.85);
+                --hero-chip-border: rgba(148, 163, 184, 0.7);
+                --hero-graph-bg: radial-gradient(circle at top, rgba(24, 24, 27, 1) 0, #050509 80%);
+                --hero-graph-border: rgba(63, 63, 70, 0.9);
+                --hero-pill-bg: rgba(9, 9, 11, 0.8);
+                --hero-pill-border: rgba(63, 63, 70, 0.9);
+                --hero-tag-bg: rgba(9, 9, 11, 0.9);
+                --scroll-line-start: rgba(148, 163, 184, 0.1);
+                --scroll-line-end: rgba(148, 163, 184, 0.9);
+                --card-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+                --card-shadow-hover: 0 28px 55px rgba(0, 0, 0, 0.85);
                 --shadow-soft: 0 30px 60px rgba(0, 0, 0, 0.55);
                 --radius-xl: 24px;
                 --radius-lg: 18px;
                 --radius-pill: 999px;
                 --nav-blur: blur(18px);
                 --max-width: 1060px;
+            }
+
+            :root[data-theme="light"] {
+                --bg: #f8fafc;
+                --bg-elevated: #ffffff;
+                --bg-soft: #f1f5f9;
+                --fg: #0f172a;
+                --fg-muted: #4b5563;
+                --accent: #2563eb;
+                --border-subtle: #d0d7e2;
+                --body-gradient-start: #e8f0ff;
+                --nav-bg: rgba(255, 255, 255, 0.9);
+                --nav-border: rgba(226, 232, 240, 0.9);
+                --nav-link-color: #0f172a;
+                --nav-cta-bg: radial-gradient(circle at top, #f4f8ff 0, #e0eaff 60%, #d2e0ff 100%);
+                --nav-cta-border: rgba(148, 163, 184, 0.8);
+                --nav-cta-shadow: 0 18px 30px rgba(15, 23, 42, 0.25);
+                --ghost-bg: radial-gradient(circle at top, #f9fafb 0, #edf2f7 60%);
+                --badge-bg: radial-gradient(circle at top, #f1f5f9 0, #e2e8f0 65%);
+                --surface-card-bg: radial-gradient(circle at top left, #ffffff 0, #f5f7fb 80%);
+                --surface-card-hover-bg: radial-gradient(circle at top left, #f5f7fb 0, #e6ebf5 80%);
+                --surface-card-border: rgba(203, 213, 225, 0.9);
+                --surface-card-border-strong: rgba(148, 163, 184, 1);
+                --surface-solid: rgba(255, 255, 255, 0.95);
+                --timeline-divider: rgba(226, 232, 240, 0.9);
+                --hero-card-bg: radial-gradient(circle at top left, #ffffff 0, #edf2ff 75%);
+                --hero-card-border: rgba(203, 213, 225, 0.9);
+                --hero-chip-bg: rgba(226, 232, 240, 0.95);
+                --hero-chip-border: rgba(148, 163, 184, 0.9);
+                --hero-graph-bg: radial-gradient(circle at top, #f8fafc 0, #dbeafe 85%);
+                --hero-graph-border: rgba(203, 213, 225, 0.9);
+                --hero-pill-bg: rgba(248, 250, 252, 0.92);
+                --hero-pill-border: rgba(203, 213, 225, 0.9);
+                --hero-tag-bg: rgba(248, 250, 252, 0.92);
+                --scroll-line-start: rgba(148, 163, 184, 0.25);
+                --scroll-line-end: rgba(71, 85, 105, 0.8);
+                --card-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+                --card-shadow-hover: 0 26px 55px rgba(15, 23, 42, 0.2);
+                --shadow-soft: 0 30px 60px rgba(15, 23, 42, 0.2);
             }
 
             * {
@@ -35,7 +117,8 @@
 
             body {
                 font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, -system-ui, "Segoe UI", sans-serif;
-                background: radial-gradient(circle at top, #121212 0, #000000 45%, #000000 100%);
+                background: radial-gradient(circle at top, var(--body-gradient-start) 0, var(--bg) 45%, var(--bg) 100%);
+                background-color: var(--bg);
                 color: var(--fg);
                 -webkit-font-smoothing: antialiased;
                 text-rendering: optimizeLegibility;
@@ -73,9 +156,9 @@
                 align-items: center;
                 justify-content: space-between;
                 padding: 10px 16px;
-                background: rgba(12, 12, 12, 0.84);
+                background: var(--nav-bg);
                 border-radius: 999px;
-                border: 1px solid rgba(63, 63, 70, 0.7);
+                border: 1px solid var(--nav-border);
                 backdrop-filter: var(--nav-blur);
                 -webkit-backdrop-filter: var(--nav-blur);
                 pointer-events: auto;
@@ -88,7 +171,7 @@
                 font-size: 13px;
                 letter-spacing: 0.12em;
                 text-transform: uppercase;
-                color: #d4d4d8;
+                color: var(--fg-muted);
             }
 
             .nav-dot {
@@ -104,7 +187,7 @@
                 align-items: center;
                 gap: 18px;
                 font-size: 13px;
-                color: #e4e4e7;
+                color: var(--nav-link-color);
             }
 
             .nav-link {
@@ -120,18 +203,67 @@
             .nav-cta {
                 padding: 6px 14px;
                 border-radius: 999px;
-                border: 1px solid rgba(63, 63, 70, 0.9);
-                background: radial-gradient(circle at top, #27272a 0, #18181b 60%, #09090b 100%);
+                border: 1px solid var(--nav-cta-border);
+                background: var(--nav-cta-bg);
                 font-size: 13px;
                 display: flex;
                 align-items: center;
                 gap: 6px;
-                box-shadow: 0 14px 30px rgba(0, 0, 0, 0.75);
+                box-shadow: var(--nav-cta-shadow);
             }
 
             .nav-cta span {
                 font-size: 12px;
                 color: var(--fg-muted);
+            }
+
+            .theme-toggle {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+                padding: 6px 12px;
+                border-radius: var(--radius-pill);
+                border: 1px solid var(--surface-card-border);
+                background: var(--ghost-bg);
+                appearance: none;
+                font: inherit;
+                font-size: 12px;
+                color: var(--fg);
+                cursor: pointer;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.45);
+                transition: transform 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+            }
+
+            .theme-toggle:hover {
+                transform: translateY(-1px);
+                border-color: var(--surface-card-border-strong);
+            }
+
+            .theme-toggle:focus-visible {
+                outline: 2px solid var(--accent);
+                outline-offset: 2px;
+            }
+
+            .theme-toggle-icon {
+                font-size: 14px;
+                line-height: 1;
+            }
+
+            .theme-toggle .sun {
+                display: none;
+            }
+
+            :root[data-theme="light"] .theme-toggle {
+                box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2);
+            }
+
+            :root[data-theme="light"] .theme-toggle .sun {
+                display: inline;
+            }
+
+            :root[data-theme="light"] .theme-toggle .moon {
+                display: none;
             }
 
             /* Hero */
@@ -191,9 +323,9 @@
                 font-size: 11px;
                 padding: 4px 10px;
                 border-radius: var(--radius-pill);
-                border: 1px solid rgba(63, 63, 70, 0.8);
-                background: radial-gradient(circle at top, #18181b 0, #09090b 60%);
-                color: #e5e5e5;
+                border: 1px solid var(--surface-card-border);
+                background: var(--badge-bg);
+                color: var(--fg);
                 white-space: nowrap;
             }
 
@@ -230,10 +362,10 @@
             .btn-ghost {
                 padding: 11px 18px;
                 border-radius: var(--radius-pill);
-                border: 1px solid rgba(63, 63, 70, 0.9);
+                border: 1px solid var(--surface-card-border);
                 font-size: 14px;
-                color: #e4e4e7;
-                background: radial-gradient(circle at top, #18181b 0, #050509 60%);
+                color: var(--fg);
+                background: var(--ghost-bg);
                 cursor: pointer;
                 display: inline-flex;
                 align-items: center;
@@ -243,7 +375,7 @@
 
             .btn-ghost:hover {
                 transform: translateY(-1px);
-                border-color: rgba(82, 82, 91, 1);
+                border-color: var(--surface-card-border-strong);
             }
 
             .hero-meta {
@@ -259,7 +391,7 @@
                 font-size: 12px;
                 text-transform: uppercase;
                 letter-spacing: 0.14em;
-                color: #e5e5e5;
+                color: var(--fg);
                 margin-bottom: 3px;
             }
 
@@ -269,8 +401,8 @@
                 position: relative;
                 border-radius: var(--radius-xl);
                 padding: 22px 22px 24px;
-                background: radial-gradient(circle at top left, #18181b 0, #050509 60%);
-                border: 1px solid rgba(82, 82, 91, 0.8);
+                background: var(--hero-card-bg);
+                border: 1px solid var(--hero-card-border);
                 box-shadow: var(--shadow-soft);
                 overflow: hidden;
                 isolation: isolate;
@@ -300,7 +432,7 @@
 
             .hero-card-title {
                 font-size: 14px;
-                color: #e4e4e7;
+                color: var(--fg);
             }
 
             .hero-card-sub {
@@ -312,8 +444,8 @@
                 padding: 6px 11px;
                 font-size: 11px;
                 border-radius: 999px;
-                border: 1px solid rgba(148, 163, 184, 0.7);
-                background: rgba(15, 23, 42, 0.85);
+                border: 1px solid var(--hero-chip-border);
+                background: var(--hero-chip-bg);
                 display: inline-flex;
                 align-items: center;
                 gap: 6px;
@@ -331,8 +463,8 @@
                 margin: 12px 0 18px;
                 padding: 14px;
                 border-radius: 18px;
-                border: 1px solid rgba(63, 63, 70, 0.9);
-                background: radial-gradient(circle at top, rgba(24, 24, 27, 1) 0, #050509 80%);
+                border: 1px solid var(--hero-graph-border);
+                background: var(--hero-graph-bg);
                 overflow: hidden;
             }
 
@@ -377,8 +509,8 @@
             .hero-graph-pill {
                 padding: 4px 10px;
                 border-radius: 999px;
-                border: 1px solid rgba(63, 63, 70, 0.9);
-                background: rgba(9, 9, 11, 0.8);
+                border: 1px solid var(--hero-pill-border);
+                background: var(--hero-pill-bg);
                 display: inline-flex;
                 gap: 4px;
                 align-items: center;
@@ -389,7 +521,7 @@
             }
 
             .hero-graph-pill strong {
-                color: #e5e5e5;
+                color: var(--fg);
                 font-weight: 500;
             }
 
@@ -404,8 +536,8 @@
             .hero-tag {
                 padding: 3px 8px;
                 border-radius: 999px;
-                border: 1px solid rgba(63, 63, 70, 0.9);
-                background: rgba(9, 9, 11, 0.9);
+                border: 1px solid var(--surface-card-border);
+                background: var(--hero-tag-bg);
             }
 
             /* 通用 section */
@@ -442,9 +574,9 @@
             .card {
                 border-radius: var(--radius-lg);
                 padding: 16px 16px 18px;
-                background: radial-gradient(circle at top left, #18181b 0, #050509 70%);
-                border: 1px solid rgba(63, 63, 70, 0.9);
-                box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+                background: var(--surface-card-bg);
+                border: 1px solid var(--surface-card-border);
+                box-shadow: var(--card-shadow);
                 position: relative;
                 overflow: hidden;
                 transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
@@ -452,9 +584,9 @@
 
             .card:hover {
                 transform: translateY(-4px);
-                box-shadow: 0 28px 55px rgba(0, 0, 0, 0.85);
-                border-color: rgba(82, 82, 91, 1);
-                background: radial-gradient(circle at top left, #1f2933 0, #050509 70%);
+                box-shadow: var(--card-shadow-hover);
+                border-color: var(--surface-card-border-strong);
+                background: var(--surface-card-hover-bg);
             }
 
             .card-kicker {
@@ -482,14 +614,14 @@
                 flex-wrap: wrap;
                 gap: 6px;
                 font-size: 11px;
-                color: #d4d4d8;
+                color: var(--fg-muted);
             }
 
             .pill {
                 padding: 3px 9px;
                 border-radius: 999px;
-                border: 1px solid rgba(63, 63, 70, 0.9);
-                background: rgba(9, 9, 11, 0.9);
+                border: 1px solid var(--surface-card-border);
+                background: var(--surface-solid);
             }
 
             .card-link {
@@ -515,8 +647,8 @@
 
             .timeline {
                 border-radius: var(--radius-lg);
-                border: 1px solid rgba(63, 63, 70, 0.9);
-                background: radial-gradient(circle at top, #18181b 0, #050509 70%);
+                border: 1px solid var(--surface-card-border);
+                background: var(--surface-card-bg);
                 padding: 18px 18px 12px;
             }
 
@@ -528,7 +660,7 @@
             }
 
             .timeline-item + .timeline-item {
-                border-top: 1px solid rgba(39, 39, 42, 0.8);
+                border-top: 1px solid var(--timeline-divider);
             }
 
             .timeline-role {
@@ -560,7 +692,7 @@
                 position: absolute;
                 left: 0;
                 top: 0;
-                color: #a1a1aa;
+                color: var(--fg-muted);
             }
 
             .timeline-meta {
@@ -580,15 +712,15 @@
             .skills-group {
                 padding: 14px 14px 12px;
                 border-radius: var(--radius-lg);
-                border: 1px solid rgba(63, 63, 70, 0.9);
-                background: rgba(9, 9, 11, 0.9);
+                border: 1px solid var(--surface-card-border);
+                background: var(--surface-solid);
             }
 
             .skills-title {
                 font-size: 13px;
                 text-transform: uppercase;
                 letter-spacing: 0.16em;
-                color: #e4e4e7;
+                color: var(--fg);
                 margin-bottom: 6px;
             }
 
@@ -607,8 +739,8 @@
             .contact-card {
                 border-radius: var(--radius-xl);
                 padding: 22px 20px 18px;
-                border: 1px solid rgba(63, 63, 70, 0.9);
-                background: radial-gradient(circle at top left, #18181b 0, #050509 70%);
+                border: 1px solid var(--surface-card-border);
+                background: var(--surface-card-bg);
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
@@ -662,7 +794,7 @@
             .scroll-indicator-line {
                 width: 1px;
                 height: 22px;
-                background: linear-gradient(180deg, rgba(148, 163, 184, 0.1), rgba(148, 163, 184, 0.9));
+                background: linear-gradient(180deg, var(--scroll-line-start), var(--scroll-line-end));
                 animation: scrollPulse 1.6s ease-in-out infinite;
             }
 
@@ -790,6 +922,10 @@
                     <a href="#experience" class="nav-link">Experience</a>
                     <a href="#skills" class="nav-link">Skills</a>
                     <a href="#contact" class="nav-link">Contact</a>
+                    <button type="button" class="theme-toggle" aria-label="Switch to light theme">
+                        <span class="theme-toggle-icon moon" aria-hidden="true">🌙</span>
+                        <span class="theme-toggle-icon sun" aria-hidden="true">☀️</span>
+                    </button>
                     <a href="TODO_LINK_TO_RESUME_PDF" class="nav-cta">
                         <span>Resume</span>
                         <strong>↗</strong>
@@ -1160,7 +1296,59 @@
             );
 
             document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+            // Theme toggle
+            const root = document.documentElement;
+            const themeToggle = document.querySelector(".theme-toggle");
+            const themeStorageKey = "boshen-theme";
+            const prefersLight = window.matchMedia ? window.matchMedia("(prefers-color-scheme: light)") : { matches: false };
+
+            const getStoredTheme = () => {
+                try {
+                    return localStorage.getItem(themeStorageKey);
+                } catch (error) {
+                    return null;
+                }
+            };
+
+            const storeTheme = (theme) => {
+                try {
+                    localStorage.setItem(themeStorageKey, theme);
+                } catch (error) {
+                    /* ignore write failures */
+                }
+            };
+
+            const applyTheme = (theme) => {
+                root.dataset.theme = theme;
+                if (themeToggle) {
+                    themeToggle.setAttribute("aria-label", theme === "light" ? "Switch to dark theme" : "Switch to light theme");
+                }
+            };
+
+            const storedTheme = getStoredTheme();
+            const initialTheme = storedTheme || (prefersLight.matches ? "light" : "dark");
+            applyTheme(initialTheme);
+
+            if (themeToggle) {
+                themeToggle.addEventListener("click", () => {
+                    const nextTheme = root.dataset.theme === "light" ? "dark" : "light";
+                    applyTheme(nextTheme);
+                    storeTheme(nextTheme);
+                });
+            }
+
+            const handleSystemThemeChange = (event) => {
+                if (!getStoredTheme()) {
+                    applyTheme(event.matches ? "light" : "dark");
+                }
+            };
+
+            if (typeof prefersLight.addEventListener === "function") {
+                prefersLight.addEventListener("change", handleSystemThemeChange);
+            } else if (typeof prefersLight.addListener === "function") {
+                prefersLight.addListener(handleSystemThemeChange);
+            }
         </script>
     </body>
 </html>
-
