@@ -46,6 +46,7 @@
                 --surface-solid: rgba(9, 9, 11, 0.9);
                 --timeline-divider: rgba(39, 39, 42, 0.8);
                 --hero-card-bg: radial-gradient(circle at top left, #18181b 0, #050509 60%);
+                --hero-title-gradient: linear-gradient(120deg, #ffffff, #e5e5e5, #d4d4d4);
                 --hero-card-border: rgba(82, 82, 91, 0.8);
                 --hero-chip-bg: rgba(15, 23, 42, 0.85);
                 --hero-chip-border: rgba(148, 163, 184, 0.7);
@@ -90,6 +91,7 @@
                 --surface-solid: rgba(255, 255, 255, 0.95);
                 --timeline-divider: rgba(226, 232, 240, 0.9);
                 --hero-card-bg: radial-gradient(circle at top left, #ffffff 0, #edf2ff 75%);
+                --hero-title-gradient: linear-gradient(120deg, #1e3a8a, #1d4ed8, #38bdf8);
                 --hero-card-border: rgba(203, 213, 225, 0.9);
                 --hero-chip-bg: rgba(226, 232, 240, 0.95);
                 --hero-chip-border: rgba(148, 163, 184, 0.9);
@@ -299,7 +301,7 @@
             }
 
             .hero-title span {
-                background: linear-gradient(120deg, #ffffff, #e5e5e5, #d4d4d4);
+                background: var(--hero-title-gradient);
                 -webkit-background-clip: text;
                 color: transparent;
             }
