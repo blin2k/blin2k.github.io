@@ -1,0 +1,183 @@
+%-------------------------
+% Resume - Boshen Lin
+% Optimized for 2025/2026 Canadian CS New Grad Market
+% Key changes: Skills moved up (ATS), publication elevated,
+% bullets tightened with XYZ impact, keyword density improved,
+% AI/ML emphasis, consolidated to strict 1-page
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Tight margins
+\addtolength{\oddsidemargin}{-0.50in}
+\addtolength{\evensidemargin}{-0.50in}
+\addtolength{\textwidth}{1.00in}
+\addtolength{\topmargin}{-0.65in}
+\addtolength{\textheight}{1.30in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+    \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Machine-readable PDF
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+    \item\small{
+        #1 \vspace{-2pt}
+    }
+}
+
+\newcommand{\resumeSubheading}[4]{
+    \vspace{-2pt}\item
+        \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+            \textbf{#1} & #2 \\
+            \textit{\small #3} & \textit{\small #4} \\
+        \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+            \small #1 & #2 \\
+        \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Boshen Lin} \\ \vspace{2pt}
+    \small (825) 983-2210 $|$
+    \href{mailto:blin1@ualberta.ca}{blin1@ualberta.ca} $|$
+    \href{https://blin2k.github.io}{blin2k.github.io} $|$
+    \href{https://github.com/blin2k}{github.com/blin2k} $|$
+    \href{https://www.linkedin.com/in/boshen-lin/}{linkedin.com/in/boshen-lin}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+            {University of Alberta}{Edmonton, AB}
+            {Bachelor of Science in Computing Science (Honors)}{Sept. 2021 -- May 2026}
+            \resumeItemListStart
+                \resumeItem{\textbf{First-Author Publication} at CSCE 2025 $|$ \textbf{Coursework:} Compilers, OS, Algorithms, ML, Deep Learning, Databases, Software Engineering}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS (moved up for ATS scanning)----------- 
+\section{Technical Skills}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \small{\item{
+            \textbf{Languages:} Python, TypeScript, JavaScript, Kotlin, C++, Java, Go, Rust, SQL, HTML/CSS \\
+            \textbf{Frameworks:} React, Vue 3, Next.js, tRPC, GraphQL, Django, Express, Spring Boot, Android SDK, PyTorch \\
+            \textbf{Cloud \& DevOps:} Amazon Web Services (AWS S3, EC2), Docker, GitHub Actions CI/CD, Firebase, Google Cloud \\
+            \textbf{Data \& Tools:} PostgreSQL, MongoDB, Redis, REST APIs, Git, Linux, Agile/Scrum, Jira, pytest, Playwright
+        }}
+    \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+    \resumeSubHeadingListStart
+
+        \resumeSubheading
+            {Software Engineer}{Oct. 2025 -- Present}
+            {University of Alberta -- Civil \& Environmental Engineering}{Edmonton, AB}
+            \resumeItemListStart
+                \resumeItem{Designed and built modular Android app with event-driven architecture, streaming 5-channel biosignal data via UDP/TCP at 50--200 Hz; engineered Kotlin rendering pipeline with unit tests achieving sub-100ms latency and 99.2\% signal fidelity.}
+            \resumeItemListEnd
+
+        \resumeSubheading
+            {Full-Stack Software Engineer Intern}{Dec. 2024 -- Oct. 2025}
+            {So Shall We.co}{Edmonton, AB}
+            \resumeItemListStart
+                \resumeItem{Built full-stack analytics platform with microservices architecture (React, TypeScript, Node.js) aggregating 500K+ daily metrics from Google Ads, Meta Ads, and GA4 APIs, reducing manual reporting by 85\%.}
+                \resumeItem{Designed automated ETL pipeline with data validation and AWS S3 storage handling 2GB+ daily ingestion with partitioning.}
+                \resumeItem{Containerized services with Docker; deployed CI/CD via GitHub Actions with automated testing and PR review workflows; tracked sprints in Jira; achieved 99.5\% pipeline reliability.}
+            \resumeItemListEnd
+
+        \resumeSubheading
+            {Software Engineer}{May 2024 -- Sept. 2024}
+            {University of Alberta -- Civil \& Environmental Engineering}{Edmonton, AB}
+            \resumeItemListStart
+                \resumeItem{Designed and deployed Android app processing 10,000+ real-time sensor data points with HRV analysis pipeline and KDE heatmap visualization on Google Maps; 92\% accuracy across 50+ users.}
+            \resumeItemListEnd
+
+        \resumeSubheading
+            {Software Engineer Intern}{May 2023 -- Sept. 2023}
+            {Leettle Mint LLC}{Pittsburgh, PA}
+            \resumeItemListStart
+                \resumeItem{Developed Vue 3 SPA with component-level unit tests and real-time financial data visualization serving 1,000+ daily active users.}
+                \resumeItem{Optimized MongoDB queries via compound indexing and Redis caching layer, reducing API latency by 50\% while supporting 100+ concurrent connections with pagination and rate limiting.}
+            \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{Gazprea Compiler} $|$ \emph{C++, ANTLR, MLIR}}{} 
+            \resumeItemListStart
+                \resumeItem{Built complete compiler toolchain (lexer, parser, semantic analyzer, MLIR codegen) for a custom language with 50+ grammar rules, type inference, scoped symbol tables, and optimized SSA-form IR generation.}
+            \resumeItemListEnd
+
+        \resumeProjectHeading
+            {\textbf{Generative Models Benchmark Suite} $|$ \emph{Python, PyTorch, CUDA}}{} 
+            \resumeItemListStart
+                \resumeItem{Implemented VAE, DDPM, DDIM, and Latent Diffusion from scratch in PyTorch; achieved 2.3x training speedup via mixed precision (AMP) and cosine scheduling; benchmarked with FID/SSIM/MSE across 100+ Weights \& Biases runs.}
+            \resumeItemListEnd
+
+        \resumeProjectHeading
+            {\textbf{Crane Path Optimization} $|$ \emph{Python, NumPy, SciPy}}{} 
+            \resumeItemListStart
+                \resumeItem{Developed multi-objective optimization algorithm reducing search complexity by 97\% through spherical coordinate transformation; validated on 5 real construction site layouts with collision-free paths.}
+            \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------AWARDS & LANGUAGES-----------
+\section{Awards \& Languages}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \small{\item{
+            \textbf{Awards:} International Student Scholarship (2021--2023), UAlberta Undergraduate Leadership Award (2023) $|$ \textbf{Languages:} English, Cantonese (Native), Mandarin (Native)
+        }}
+    \end{itemize}
+
+%-------------------------------------------
+\end{document}

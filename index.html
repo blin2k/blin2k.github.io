@@ -7,7 +7,7 @@
   <meta name="description" content="Personal portfolio of Boshen Lin">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -33,9 +33,9 @@
         <a href="#research" class="nav-link" role="tab" aria-selected="false" aria-controls="page-research">Research</a>
         <a href="#projects" class="nav-link" role="tab" aria-selected="false" aria-controls="page-projects">Projects</a>
         <a href="#experience" class="nav-link" role="tab" aria-selected="false" aria-controls="page-experience">Experience</a>
-        <a href="#blog" class="nav-link" role="tab" aria-selected="false" aria-controls="page-blog">Blog</a>
-        <a href="#gallery" class="nav-link" role="tab" aria-selected="false" aria-controls="page-gallery">Gallery</a>
-        <a href="#favorites" class="nav-link" role="tab" aria-selected="false" aria-controls="page-favorites">Favorites</a>
+        <!-- <a href="#blog" class="nav-link" role="tab" aria-selected="false" aria-controls="page-blog">Blog</a> -->
+        <!-- <a href="#gallery" class="nav-link" role="tab" aria-selected="false" aria-controls="page-gallery">Gallery</a> -->
+        <!-- <a href="#favorites" class="nav-link" role="tab" aria-selected="false" aria-controls="page-favorites">Favorites</a> -->
         <a href="#contact" class="nav-link" role="tab" aria-selected="false" aria-controls="page-contact">Contact</a>
       </div>
     </div>
@@ -86,12 +86,12 @@
           </div>
           <div class="about-text">
             <h1 class="about-name stagger">Boshen Lin</h1>
-            <p class="about-tagline stagger">Researcher, builder, thinker.</p>
+            <p class="about-tagline stagger">Computing Science, University of Alberta</p>
             <svg class="hand-drawn-divider" viewBox="0 0 200 8" width="200" height="8" aria-hidden="true">
               <path d="M0 4 Q50 0 100 4 Q150 8 200 4" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
             <p class="about-bio stagger">
-              I'm interested in the spaces where technology meets human experience. I build things, write about ideas, and try to understand the world a little better each day. Currently exploring research at the intersection of systems and intelligence.
+              Honors Computing Science student at the University of Alberta, graduating May 2026. I build full-stack systems, work on real-time signal processing, and have a first-author publication at CSCE 2025. I care about compilers, generative models, and making complex things feel simple.
             </p>
             <div class="about-links stagger">
               <a href="resume.pdf" class="text-link" target="_blank" rel="noopener">Resume</a>
@@ -117,20 +117,10 @@
             <div class="research-year">2025</div>
             <div class="research-body">
               <h3 class="research-title">
-                <a href="#" class="text-link" target="_blank" rel="noopener">Paper Title: A Study in Something Interesting</a>
+                <a href="#" class="text-link" target="_blank" rel="noopener">First-Author Publication</a>
               </h3>
-              <p class="research-venue">Conference or Journal Name</p>
-              <p class="research-desc">A brief description of the research contribution and its significance. What problem does it solve and why does it matter.</p>
-            </div>
-          </article>
-          <article class="research-entry stagger">
-            <div class="research-year">2024</div>
-            <div class="research-body">
-              <h3 class="research-title">
-                <a href="#" class="text-link" target="_blank" rel="noopener">Another Paper: Exploring Novel Approaches</a>
-              </h3>
-              <p class="research-venue">Workshop or Conference Name</p>
-              <p class="research-desc">Description of research findings and methodology. The impact and potential applications of this work.</p>
+              <p class="research-venue">Canadian Society for Civil Engineering (CSCE) 2025</p>
+              <p class="research-desc">Research conducted at the University of Alberta's Civil &amp; Environmental Engineering department, contributing to real-time biosignal processing and sensor data analysis.</p>
             </div>
           </article>
         </div>
@@ -150,48 +140,49 @@
           <a href="#" class="project-card stagger" target="_blank" rel="noopener">
             <div class="project-icon">
               <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
-                <rect x="5" y="8" width="30" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <line x1="5" y1="16" x2="35" y2="16" stroke="currentColor" stroke-width="1"/>
-                <circle cx="10" cy="12" r="1.5" fill="currentColor"/>
-                <circle cx="15" cy="12" r="1.5" fill="currentColor"/>
-                <circle cx="20" cy="12" r="1.5" fill="currentColor"/>
+                <!-- Compiler: angle brackets -->
+                <path d="M10 14 L4 20 L10 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M30 14 L36 20 L30 26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="23" y1="10" x2="17" y2="30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3 class="project-title">Project Alpha</h3>
-            <p class="project-desc">A tool that does something useful and interesting with elegant simplicity.</p>
+            <h3 class="project-title">Gazprea Compiler</h3>
+            <p class="project-desc">Complete compiler toolchain — lexer, parser, semantic analyzer, MLIR codegen — for a custom language with 50+ grammar rules, type inference, and SSA-form IR. Built with C++, ANTLR, and MLIR.</p>
           </a>
           <a href="#" class="project-card stagger" target="_blank" rel="noopener">
             <div class="project-icon">
               <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
-                <circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M14 20 L18 24 L26 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Neural network nodes -->
+                <circle cx="10" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                <circle cx="10" cy="28" r="3" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                <circle cx="20" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                <circle cx="20" cy="20" r="3" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                <circle cx="20" cy="30" r="3" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                <circle cx="30" cy="20" r="3" fill="none" stroke="currentColor" stroke-width="1.3"/>
+                <line x1="13" y1="12" x2="17" y2="10" stroke="currentColor" stroke-width="0.8"/>
+                <line x1="13" y1="12" x2="17" y2="20" stroke="currentColor" stroke-width="0.8"/>
+                <line x1="13" y1="28" x2="17" y2="20" stroke="currentColor" stroke-width="0.8"/>
+                <line x1="13" y1="28" x2="17" y2="30" stroke="currentColor" stroke-width="0.8"/>
+                <line x1="23" y1="10" x2="27" y2="20" stroke="currentColor" stroke-width="0.8"/>
+                <line x1="23" y1="20" x2="27" y2="20" stroke="currentColor" stroke-width="0.8"/>
+                <line x1="23" y1="30" x2="27" y2="20" stroke="currentColor" stroke-width="0.8"/>
               </svg>
             </div>
-            <h3 class="project-title">Project Beta</h3>
-            <p class="project-desc">An exploration of systems design that pushes the boundaries of convention.</p>
+            <h3 class="project-title">Generative Models Benchmark</h3>
+            <p class="project-desc">VAE, DDPM, DDIM, and Latent Diffusion implemented from scratch in PyTorch. 2.3x training speedup via mixed precision; benchmarked with FID/SSIM/MSE across 100+ W&amp;B runs.</p>
           </a>
           <a href="#" class="project-card stagger" target="_blank" rel="noopener">
             <div class="project-icon">
               <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
-                <path d="M8 32 L20 8 L32 32 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-                <line x1="20" y1="22" x2="20" y2="26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                <circle cx="20" cy="28.5" r="0.5" fill="currentColor"/>
+                <!-- Crane / optimization path -->
+                <path d="M8 34 L8 8 L32 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 8 L20 20" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 2"/>
+                <circle cx="20" cy="20" r="2" fill="currentColor"/>
+                <path d="M12 30 Q18 22 26 28 Q30 18 34 14" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3 class="project-title">Project Gamma</h3>
-            <p class="project-desc">A creative experiment at the intersection of art and computation.</p>
-          </a>
-          <a href="#" class="project-card stagger" target="_blank" rel="noopener">
-            <div class="project-icon">
-              <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
-                <rect x="6" y="6" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="22" y="6" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="6" y="22" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <rect x="22" y="22" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
-              </svg>
-            </div>
-            <h3 class="project-title">Project Delta</h3>
-            <p class="project-desc">Building infrastructure that makes complex things feel simple.</p>
+            <h3 class="project-title">Crane Path Optimization</h3>
+            <p class="project-desc">Multi-objective optimization reducing search complexity by 97% through spherical coordinate transformation. Validated on 5 real construction site layouts with collision-free paths. Python, NumPy, SciPy.</p>
           </a>
         </div>
       </div>
@@ -215,28 +206,37 @@
           <div class="timeline-entry stagger">
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-content">
-              <div class="timeline-dates">2024 — Present</div>
-              <h3 class="timeline-role">Role Title</h3>
-              <div class="timeline-company">Company Name</div>
-              <p class="timeline-summary">A concise description of what you did, what you built, and the impact you had.</p>
+              <div class="timeline-dates">Oct 2025 — Present</div>
+              <h3 class="timeline-role">Software Engineer</h3>
+              <div class="timeline-company">University of Alberta — Civil &amp; Environmental Engineering</div>
+              <p class="timeline-summary">Designed modular Android app with event-driven architecture, streaming 5-channel biosignal data via UDP/TCP at 50–200 Hz. Engineered Kotlin rendering pipeline achieving sub-100ms latency and 99.2% signal fidelity.</p>
             </div>
           </div>
           <div class="timeline-entry stagger">
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-content">
-              <div class="timeline-dates">2023 — 2024</div>
-              <h3 class="timeline-role">Previous Role</h3>
-              <div class="timeline-company">Another Company</div>
-              <p class="timeline-summary">What you contributed, learned, and built during this period.</p>
+              <div class="timeline-dates">Dec 2024 — Oct 2025</div>
+              <h3 class="timeline-role">Full-Stack Software Engineer Intern</h3>
+              <div class="timeline-company">So Shall We.co</div>
+              <p class="timeline-summary">Built full-stack analytics platform aggregating 500K+ daily metrics from Google Ads, Meta Ads, and GA4 APIs. Designed automated ETL pipeline handling 2GB+ daily ingestion. Containerized with Docker; CI/CD via GitHub Actions.</p>
             </div>
           </div>
           <div class="timeline-entry stagger">
             <div class="timeline-dot" aria-hidden="true"></div>
             <div class="timeline-content">
-              <div class="timeline-dates">2022 — 2023</div>
-              <h3 class="timeline-role">Earlier Role</h3>
-              <div class="timeline-company">Earlier Company</div>
-              <p class="timeline-summary">Foundations laid, skills developed, and early professional experiences.</p>
+              <div class="timeline-dates">May 2024 — Sept 2024</div>
+              <h3 class="timeline-role">Software Engineer</h3>
+              <div class="timeline-company">University of Alberta — Civil &amp; Environmental Engineering</div>
+              <p class="timeline-summary">Designed and deployed Android app processing 10,000+ real-time sensor data points with HRV analysis pipeline and KDE heatmap visualization on Google Maps. 92% accuracy across 50+ users.</p>
+            </div>
+          </div>
+          <div class="timeline-entry stagger">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-dates">May 2023 — Sept 2023</div>
+              <h3 class="timeline-role">Software Engineer Intern</h3>
+              <div class="timeline-company">Leettle Mint LLC</div>
+              <p class="timeline-summary">Developed Vue 3 SPA with real-time financial data visualization serving 1,000+ daily active users. Optimized MongoDB queries via compound indexing and Redis caching, reducing API latency by 50%.</p>
             </div>
           </div>
         </div>
@@ -522,14 +522,12 @@
           </svg>
           <p class="contact-text stagger">I'd love to hear from you — whether it's about research, a project idea, or just to say hello.</p>
           <div class="contact-links stagger">
-            <a href="mailto:hello@Boshenlin.com" class="text-link">hello@Boshenlin.com</a>
+            <a href="mailto:blin1@ualberta.ca" class="text-link">blin1@ualberta.ca</a>
           </div>
           <div class="contact-social stagger">
-            <a href="#" class="social-link" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/blin2k" class="social-link" target="_blank" rel="noopener">GitHub</a>
             <span class="link-sep">/</span>
-            <a href="#" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
-            <span class="link-sep">/</span>
-            <a href="#" class="social-link" target="_blank" rel="noopener">Twitter</a>
+            <a href="https://www.linkedin.com/in/boshen-lin/" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
       </div>

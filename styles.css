@@ -26,7 +26,7 @@
 
   /* Typography */
   --font-serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
 
   /* Spacing */
   --nav-height: 60px;

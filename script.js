@@ -13,7 +13,7 @@
 
   function getPageId(hash) {
     const id = hash.replace('#', '') || 'about';
-    const validPages = ['about', 'research', 'projects', 'experience', 'blog', 'gallery', 'favorites', 'contact'];
+    const validPages = ['about', 'research', 'projects', 'experience', /* 'blog', 'gallery', 'favorites', */ 'contact'];
     return validPages.includes(id) ? id : 'about';
   }
 
