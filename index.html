@@ -1,472 +1,546 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boshen Lin | Software Developer & Researcher</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boshen Lin</title>
+  <meta name="description" content="Personal portfolio of Boshen Lin">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">BL</a>
-            <div class="nav-links">
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="Base_Resume.pdf" target="_blank" class="nav-resume">Resume</a>
-                <a href="#contact" class="nav-cta">Get in Touch</a>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-badge">Available for opportunities</div>
-            <h1 class="hero-title">
-                Hi, I'm <span class="highlight">Boshen Lin</span>
-            </h1>
-            <p class="hero-subtitle">
-                Software Developer & Researcher building impactful applications
-                at the intersection of <span class="accent">mobile development</span>,
-                <span class="accent">data analytics</span>, and <span class="accent">machine learning</span>.
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#about" class="nav-logo" aria-label="Home">
+        <svg class="nav-logo-sketch" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+          <path d="M6 26 Q10 8 16 10 Q22 12 18 20 Q14 28 26 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span>Boshen Lin</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <line class="hamburger-top" x1="4" y1="7" x2="20" y2="7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <line class="hamburger-mid" x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <line class="hamburger-bot" x1="4" y1="17" x2="20" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="nav-links" id="nav-links" role="tablist" aria-label="Site sections">
+        <a href="#about" class="nav-link active" role="tab" aria-selected="true" aria-controls="page-about">About</a>
+        <a href="#research" class="nav-link" role="tab" aria-selected="false" aria-controls="page-research">Research</a>
+        <a href="#projects" class="nav-link" role="tab" aria-selected="false" aria-controls="page-projects">Projects</a>
+        <a href="#experience" class="nav-link" role="tab" aria-selected="false" aria-controls="page-experience">Experience</a>
+        <a href="#blog" class="nav-link" role="tab" aria-selected="false" aria-controls="page-blog">Blog</a>
+        <a href="#gallery" class="nav-link" role="tab" aria-selected="false" aria-controls="page-gallery">Gallery</a>
+        <a href="#favorites" class="nav-link" role="tab" aria-selected="false" aria-controls="page-favorites">Favorites</a>
+        <a href="#contact" class="nav-link" role="tab" aria-selected="false" aria-controls="page-contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Container -->
+  <main class="pages">
+
+    <!-- About -->
+    <section id="page-about" class="page active" role="tabpanel" aria-labelledby="tab-about">
+      <div class="page-content about-page">
+        <div class="about-hero">
+          <div class="about-portrait">
+            <svg class="portrait-sketch" viewBox="0 0 200 260" width="200" height="260" aria-label="Hand-drawn self portrait sketch">
+              <!-- Head -->
+              <ellipse cx="100" cy="90" rx="55" ry="65" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <!-- Hair -->
+              <path d="M48 72 Q55 30 100 25 Q145 20 155 68" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M50 68 Q58 38 100 32 Q140 28 152 64" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              <!-- Left eye -->
+              <ellipse cx="78" cy="85" rx="10" ry="6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="78" cy="85" r="3" fill="currentColor"/>
+              <!-- Right eye -->
+              <ellipse cx="122" cy="85" rx="10" ry="6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="122" cy="85" r="3" fill="currentColor"/>
+              <!-- Eyebrows -->
+              <path d="M66 74 Q78 68 90 73" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M110 73 Q122 68 134 74" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <!-- Nose -->
+              <path d="M100 90 Q96 105 92 110 Q98 114 108 110 Q104 105 100 90" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              <!-- Mouth -->
+              <path d="M85 128 Q93 135 100 134 Q107 135 115 128" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <!-- Neck -->
+              <line x1="90" y1="152" x2="88" y2="185" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="110" y1="152" x2="112" y2="185" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <!-- Shoulders -->
+              <path d="M88 185 Q70 188 40 210 Q30 218 25 240" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M112 185 Q130 188 160 210 Q170 218 175 240" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <!-- Collar -->
+              <path d="M88 185 L100 210 L112 185" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              <!-- Glasses -->
+              <rect x="64" y="78" width="28" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              <rect x="108" y="78" width="28" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M92 84 Q100 80 108 84" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+              <line x1="64" y1="84" x2="48" y2="80" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+              <line x1="136" y1="84" x2="152" y2="80" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="about-text">
+            <h1 class="about-name stagger">Boshen Lin</h1>
+            <p class="about-tagline stagger">Researcher, builder, thinker.</p>
+            <svg class="hand-drawn-divider" viewBox="0 0 200 8" width="200" height="8" aria-hidden="true">
+              <path d="M0 4 Q50 0 100 4 Q150 8 200 4" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <p class="about-bio stagger">
+              I'm interested in the spaces where technology meets human experience. I build things, write about ideas, and try to understand the world a little better each day. Currently exploring research at the intersection of systems and intelligence.
             </p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">4</span>
-                    <span class="stat-label">Professional Roles</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">92%</span>
-                    <span class="stat-label">Detection Accuracy</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">1st</span>
-                    <span class="stat-label">Author Publication</span>
-                </div>
+            <div class="about-links stagger">
+              <a href="resume.pdf" class="text-link" target="_blank" rel="noopener">Resume</a>
+              <span class="link-sep">/</span>
+              <a href="#contact" class="text-link">Get in touch</a>
             </div>
-            <div class="hero-cta">
-                <a href="#experience" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
-            </div>
+          </div>
         </div>
-        <div class="hero-scroll">
-            <span>Scroll to explore</span>
-            <div class="scroll-indicator"></div>
-        </div>
+      </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section experience">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag">Experience</span>
-                <h2 class="section-title">Where I've Made an Impact</h2>
-                <p class="section-desc">From research labs to startups, building solutions that matter.</p>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-marker current"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Software Developer</h3>
-                                <p class="timeline-company">University of Alberta - Civil & Environmental Engineering</p>
-                            </div>
-                            <span class="timeline-date">Oct 2025 - Present</span>
-                        </div>
-                        <ul class="timeline-details">
-                            <li>Architected Android app for real-time physiological sensor visualization, streaming data from EmotiBit (ESP32) via UDP/TCP at 50-200 Hz with sub-100ms latency</li>
-                            <li>Engineered Kotlin rendering pipeline for 5-channel biosignal display (EDA, PPG, accelerometer, gyroscope, temperature) with dynamic scaling and synchronized timestamps</li>
-                            <li>Achieved 99.2% signal fidelity compared to desktop reference implementation through optimized packet parsing and buffer management</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span>Kotlin</span>
-                            <span>Android</span>
-                            <span>ESP32</span>
-                            <span>UDP/TCP</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Software Developer</h3>
-                                <p class="timeline-company">So Shall We.co</p>
-                            </div>
-                            <span class="timeline-date">Dec 2024 - Oct 2025</span>
-                        </div>
-                        <ul class="timeline-details">
-                            <li>Shipped full-stack analytics platform (React/TypeScript, Node.js) processing 500K+ daily ad metrics from Google Ads, Meta Ads, and GA4 APIs</li>
-                            <li>Designed ETL pipeline with automated data validation, reducing manual reporting time by 85% for 3 marketing teams</li>
-                            <li>Containerized application with Docker and deployed CI/CD via GitHub Actions, achieving 99.5% pipeline reliability</li>
-                            <li>Implemented AWS S3 storage architecture handling 2GB+ daily data ingestion with automatic partitioning</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span>React</span>
-                            <span>TypeScript</span>
-                            <span>Node.js</span>
-                            <span>AWS S3</span>
-                            <span>Docker</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Software Developer</h3>
-                                <p class="timeline-company">University of Alberta - Civil & Environmental Engineering</p>
-                            </div>
-                            <span class="timeline-date">May 2024 - Sept 2024</span>
-                        </div>
-                        <ul class="timeline-details">
-                            <li>Built Android application analyzing 10,000+ physiological data points from wearable sensors to identify urban stress hotspots using RMSSD heart-rate variability analysis</li>
-                            <li>Implemented KDE-based heatmap visualization on Google Maps, achieving 92% detection accuracy in field trials with 50+ participants</li>
-                            <li><strong>Delivered production system adopted by City of Edmonton officials for evidence-based urban planning decisions</strong></li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span>Kotlin</span>
-                            <span>Android</span>
-                            <span>Google Maps</span>
-                            <span>Data Analysis</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Software Engineer Intern</h3>
-                                <p class="timeline-company">Leettle Mint LLC</p>
-                            </div>
-                            <span class="timeline-date">May 2023 - Sept 2023</span>
-                        </div>
-                        <ul class="timeline-details">
-                            <li>Developed Vue 3 SPA with real-time financial data visualization, serving 1,000+ daily active users</li>
-                            <li>Optimized MongoDB queries with compound indexing and caching layer, reducing API latency by 50%</li>
-                            <li>Implemented RESTful backend supporting 100+ concurrent connections with pagination and rate limiting</li>
-                        </ul>
-                        <div class="timeline-tags">
-                            <span>Vue 3</span>
-                            <span>MongoDB</span>
-                            <span>Node.js</span>
-                            <span>REST API</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Research -->
+    <section id="page-research" class="page" role="tabpanel" aria-labelledby="tab-research">
+      <div class="page-content research-page">
+        <div class="page-header">
+          <h2 class="page-title stagger">Research</h2>
+          <svg class="hand-drawn-divider" viewBox="0 0 120 8" width="120" height="8" aria-hidden="true">
+            <path d="M0 4 Q30 0 60 4 Q90 8 120 4" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </div>
+        <div class="research-list">
+          <article class="research-entry stagger">
+            <div class="research-year">2025</div>
+            <div class="research-body">
+              <h3 class="research-title">
+                <a href="#" class="text-link" target="_blank" rel="noopener">Paper Title: A Study in Something Interesting</a>
+              </h3>
+              <p class="research-venue">Conference or Journal Name</p>
+              <p class="research-desc">A brief description of the research contribution and its significance. What problem does it solve and why does it matter.</p>
+            </div>
+          </article>
+          <article class="research-entry stagger">
+            <div class="research-year">2024</div>
+            <div class="research-body">
+              <h3 class="research-title">
+                <a href="#" class="text-link" target="_blank" rel="noopener">Another Paper: Exploring Novel Approaches</a>
+              </h3>
+              <p class="research-venue">Workshop or Conference Name</p>
+              <p class="research-desc">Description of research findings and methodology. The impact and potential applications of this work.</p>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section projects">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag">Projects</span>
-                <h2 class="section-title">Featured Work</h2>
-                <p class="section-desc">A selection of projects showcasing my technical range.</p>
-            </div>
-
-            <div class="projects-grid">
-                <div class="project-card featured" data-aos="fade-up">
-                    <div class="project-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
-                        </svg>
-                    </div>
-                    <h3>Crane Path Optimization System</h3>
-                    <p>Multi-objective optimization algorithm for construction crane path planning. <strong>Published as first author at CSCE 2025</strong>.</p>
-                    <ul class="project-highlights">
-                        <li>Reduced search complexity by 97% (nodes) and 98.6% (iterations) through spherical coordinate transformation and domain-specific pruning</li>
-                        <li>Validated against 5 real modular construction site layouts with collision-free path generation</li>
-                    </ul>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>NumPy</span>
-                        <span>SciPy</span>
-                        <span>Research</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <h3>Gazprea Compiler</h3>
-                    <p>Complete compiler toolchain: lexer, parser, semantic analyzer, and MLIR code generator for custom language with 50+ grammar rules.</p>
-                    <ul class="project-highlights">
-                        <li>Implemented type inference system with scoped symbol tables supporting user-defined types, functions, and short-circuit evaluation</li>
-                        <li>Generated optimized MLIR with SSA form, supporting arithmetic, control flow, memory operations, and function inlining</li>
-                    </ul>
-                    <div class="project-tags">
-                        <span>C++</span>
-                        <span>ANTLR</span>
-                        <span>MLIR</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M12 6v6l4 2"/>
-                        </svg>
-                    </div>
-                    <h3>Generative Models Benchmark Suite</h3>
-                    <p>Implemented VAE, DDPM, DDIM, and Latent Diffusion models from scratch; benchmarked on FashionMNIST.</p>
-                    <ul class="project-highlights">
-                        <li>Benchmarked using FID, SSIM, and MSE metrics</li>
-                        <li>Achieved 2.3x training speedup using mixed precision (AMP), EMA weights, and cosine noise scheduling</li>
-                        <li>Built experiment tracking pipeline with Weights & Biases for hyperparameter optimization across 100+ runs</li>
-                    </ul>
-                    <div class="project-tags">
-                        <span>PyTorch</span>
-                        <span>CUDA</span>
-                        <span>Diffusion</span>
-                        <span>VAE</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="18" height="18" rx="2"/>
-                            <path d="M3 9h18M9 21V9"/>
-                        </svg>
-                    </div>
-                    <h3>Findom Visualization Platform</h3>
-                    <p>Web application for visualizing financial data with interactive charts, filters, and responsive design.</p>
-                    <ul class="project-highlights">
-                        <li>Client-side caching for performance</li>
-                        <li>Screenshot exports functionality</li>
-                        <li>Mobile and desktop responsive UI</li>
-                    </ul>
-                    <div class="project-tags">
-                        <span>Vue 3</span>
-                        <span>MongoDB</span>
-                        <span>Node.js</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
-                    </div>
-                    <h3>Emotion Hotspot Mapping</h3>
-                    <p>Android app processing biosignal and GPS data to identify stress events and generate city-wide heatmaps.</p>
-                    <ul class="project-highlights">
-                        <li>RMSSD-based stress event detection</li>
-                        <li>KDE heatmap generation</li>
-                        <li>Urban planning decision support</li>
-                    </ul>
-                    <div class="project-tags">
-                        <span>Kotlin</span>
-                        <span>Firebase</span>
-                        <span>Maps API</span>
-                    </div>
-                </div>
-            </div>
+    <!-- Projects -->
+    <section id="page-projects" class="page" role="tabpanel" aria-labelledby="tab-projects">
+      <div class="page-content projects-page">
+        <div class="page-header">
+          <h2 class="page-title stagger">Projects</h2>
+          <svg class="hand-drawn-divider" viewBox="0 0 120 8" width="120" height="8" aria-hidden="true">
+            <path d="M0 4 Q30 0 60 4 Q90 8 120 4" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </div>
+        <div class="projects-grid">
+          <a href="#" class="project-card stagger" target="_blank" rel="noopener">
+            <div class="project-icon">
+              <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                <rect x="5" y="8" width="30" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="5" y1="16" x2="35" y2="16" stroke="currentColor" stroke-width="1"/>
+                <circle cx="10" cy="12" r="1.5" fill="currentColor"/>
+                <circle cx="15" cy="12" r="1.5" fill="currentColor"/>
+                <circle cx="20" cy="12" r="1.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="project-title">Project Alpha</h3>
+            <p class="project-desc">A tool that does something useful and interesting with elegant simplicity.</p>
+          </a>
+          <a href="#" class="project-card stagger" target="_blank" rel="noopener">
+            <div class="project-icon">
+              <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                <circle cx="20" cy="20" r="14" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M14 20 L18 24 L26 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="project-title">Project Beta</h3>
+            <p class="project-desc">An exploration of systems design that pushes the boundaries of convention.</p>
+          </a>
+          <a href="#" class="project-card stagger" target="_blank" rel="noopener">
+            <div class="project-icon">
+              <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                <path d="M8 32 L20 8 L32 32 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <line x1="20" y1="22" x2="20" y2="26" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="20" cy="28.5" r="0.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="project-title">Project Gamma</h3>
+            <p class="project-desc">A creative experiment at the intersection of art and computation.</p>
+          </a>
+          <a href="#" class="project-card stagger" target="_blank" rel="noopener">
+            <div class="project-icon">
+              <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                <rect x="6" y="6" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="22" y="6" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="6" y="22" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="22" y="22" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3 class="project-title">Project Delta</h3>
+            <p class="project-desc">Building infrastructure that makes complex things feel simple.</p>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section skills">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-tag">Skills</span>
-                <h2 class="section-title">Technical Toolkit</h2>
-                <p class="section-desc">Languages, frameworks, and tools I work with.</p>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-category" data-aos="fade-up">
-                    <h3>Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">TypeScript</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Kotlin</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Go</span>
-                        <span class="skill-tag">Rust</span>
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Frameworks</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Vue 3</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Django</span>
-                        <span class="skill-tag">Express</span>
-                        <span class="skill-tag">Android SDK</span>
-                        <span class="skill-tag">PyTorch</span>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Infrastructure</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">AWS (S3, EC2)</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">GitHub Actions</span>
-                        <span class="skill-tag">Firebase</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">Google Cloud</span>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-                    <h3>Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Vim</span>
-                        <span class="skill-tag">Android Studio</span>
-                        <span class="skill-tag">Playwright</span>
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">NumPy</span>
-                    </div>
-                </div>
-            </div>
+    <!-- Experience -->
+    <section id="page-experience" class="page" role="tabpanel" aria-labelledby="tab-experience">
+      <div class="page-content experience-page">
+        <div class="page-header">
+          <h2 class="page-title stagger">Experience</h2>
+          <svg class="hand-drawn-divider" viewBox="0 0 120 8" width="120" height="8" aria-hidden="true">
+            <path d="M0 4 Q30 0 60 4 Q90 8 120 4" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </div>
+        <div class="timeline">
+          <div class="timeline-line" aria-hidden="true">
+            <svg viewBox="0 0 4 100%" width="4" preserveAspectRatio="none">
+              <path d="M2 0 Q3 25 1 50 Q3 75 2 100" fill="none" stroke="var(--border)" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+            </svg>
+          </div>
+          <div class="timeline-entry stagger">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-dates">2024 — Present</div>
+              <h3 class="timeline-role">Role Title</h3>
+              <div class="timeline-company">Company Name</div>
+              <p class="timeline-summary">A concise description of what you did, what you built, and the impact you had.</p>
+            </div>
+          </div>
+          <div class="timeline-entry stagger">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-dates">2023 — 2024</div>
+              <h3 class="timeline-role">Previous Role</h3>
+              <div class="timeline-company">Another Company</div>
+              <p class="timeline-summary">What you contributed, learned, and built during this period.</p>
+            </div>
+          </div>
+          <div class="timeline-entry stagger">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-dates">2022 — 2023</div>
+              <h3 class="timeline-role">Earlier Role</h3>
+              <div class="timeline-company">Earlier Company</div>
+              <p class="timeline-summary">Foundations laid, skills developed, and early professional experiences.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Education & Awards Section -->
-    <section class="section education">
-        <div class="section-container">
-            <div class="two-column">
-                <div class="column" data-aos="fade-up">
-                    <div class="section-header left">
-                        <span class="section-tag">Education</span>
-                        <h2 class="section-title">Academic Background</h2>
-                    </div>
-                    <div class="education-card">
-                        <div class="education-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3>University of Alberta</h3>
-                            <p class="education-degree">B.Sc. Computing Science (Honors)</p>
-                            <p class="education-date">Sept 2021 - May 2026</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column" data-aos="fade-up" data-aos-delay="100">
-                    <div class="section-header left">
-                        <span class="section-tag">Recognition</span>
-                        <h2 class="section-title">Awards</h2>
-                    </div>
-                    <div class="awards-list">
-                        <div class="award-item">
-                            <span class="award-year">2023</span>
-                            <div>
-                                <h4>Undergraduate Leadership Award</h4>
-                                <p>University of Alberta</p>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <span class="award-year">2021-23</span>
-                            <div>
-                                <h4>International Student Scholarship</h4>
-                                <p>University of Alberta</p>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <span class="award-year">2021</span>
-                            <div>
-                                <h4>Top 25% - Canadian Senior Math Contest</h4>
-                                <p>University of Waterloo</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Blog -->
+    <section id="page-blog" class="page" role="tabpanel" aria-labelledby="tab-blog">
+      <div class="page-content blog-page">
+        <div class="page-header">
+          <h2 class="page-title stagger">Blog</h2>
+          <svg class="hand-drawn-divider" viewBox="0 0 120 8" width="120" height="8" aria-hidden="true">
+            <path d="M0 4 Q30 0 60 4 Q90 8 120 4" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </div>
+        <div class="blog-list">
+          <a href="#" class="blog-entry stagger" target="_blank" rel="noopener">
+            <time class="blog-date">Dec 2024</time>
+            <div class="blog-body">
+              <h3 class="blog-title">On the Nature of Simplicity</h3>
+              <p class="blog-excerpt">Thoughts on why the simplest solution is often the hardest to find, and what that means for how we build things.</p>
+            </div>
+            <svg class="blog-arrow" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true">
+              <path d="M5 10 L14 10 M10 6 L14 10 L10 14" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#" class="blog-entry stagger" target="_blank" rel="noopener">
+            <time class="blog-date">Oct 2024</time>
+            <div class="blog-body">
+              <h3 class="blog-title">Building in the Open</h3>
+              <p class="blog-excerpt">Why sharing your process matters more than sharing your results.</p>
+            </div>
+            <svg class="blog-arrow" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true">
+              <path d="M5 10 L14 10 M10 6 L14 10 L10 14" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#" class="blog-entry stagger" target="_blank" rel="noopener">
+            <time class="blog-date">Aug 2024</time>
+            <div class="blog-body">
+              <h3 class="blog-title">The Art of Paying Attention</h3>
+              <p class="blog-excerpt">A reflection on observation, craft, and the quiet discipline of noticing.</p>
+            </div>
+            <svg class="blog-arrow" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true">
+              <path d="M5 10 L14 10 M10 6 L14 10 L10 14" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <div class="section-container">
-            <div class="contact-content" data-aos="fade-up">
-                <span class="section-tag">Contact</span>
-                <h2 class="contact-title">Let's Build Something Together</h2>
-                <p class="contact-desc">
-                    I'm always open to discussing new opportunities, research collaborations,
-                    or interesting projects. Feel free to reach out!
-                </p>
-                <div class="contact-links">
-                    <a href="mailto:blin1@ualberta.ca" class="contact-link">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                        <span>blin1@ualberta.ca</span>
-                    </a>
-                    <a href="https://github.com/blin2k" target="_blank" rel="noopener" class="contact-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        <span>github.com/blin2k</span>
-                    </a>
-                    <a href="https://linkedin.com/in/boshen-lin" target="_blank" rel="noopener" class="contact-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                        <span>linkedin.com/in/boshen-lin</span>
-                    </a>
-                </div>
-                <div class="contact-location">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                        <circle cx="12" cy="10" r="3"/>
-                    </svg>
-                    <span>Edmonton, AB, Canada</span>
-                </div>
-            </div>
+    <!-- Gallery -->
+    <section id="page-gallery" class="page" role="tabpanel" aria-labelledby="tab-gallery">
+      <div class="page-content gallery-page">
+        <div class="page-header">
+          <h2 class="page-title stagger">Gallery</h2>
+          <svg class="hand-drawn-divider" viewBox="0 0 120 8" width="120" height="8" aria-hidden="true">
+            <path d="M0 4 Q30 0 60 4 Q90 8 120 4" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
         </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item stagger" tabindex="0" role="button" aria-label="View image: Untitled I">
+            <div class="gallery-img" style="background-color: var(--gallery-placeholder-1); aspect-ratio: 4/5;">
+              <svg viewBox="0 0 100 120" aria-hidden="true" class="gallery-placeholder-svg">
+                <path d="M20 90 L40 50 L55 70 L65 55 L80 90" fill="none" stroke="var(--text-light)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="70" cy="35" r="8" fill="none" stroke="var(--text-light)" stroke-width="1"/>
+              </svg>
+            </div>
+            <figcaption class="gallery-caption">Untitled I</figcaption>
+          </figure>
+          <figure class="gallery-item stagger" tabindex="0" role="button" aria-label="View image: Untitled II">
+            <div class="gallery-img" style="background-color: var(--gallery-placeholder-2); aspect-ratio: 3/4;">
+              <svg viewBox="0 0 90 120" aria-hidden="true" class="gallery-placeholder-svg">
+                <rect x="20" y="30" width="50" height="60" fill="none" stroke="var(--text-light)" stroke-width="1"/>
+                <line x1="20" y1="60" x2="70" y2="60" stroke="var(--text-light)" stroke-width="0.5"/>
+              </svg>
+            </div>
+            <figcaption class="gallery-caption">Untitled II</figcaption>
+          </figure>
+          <figure class="gallery-item stagger" tabindex="0" role="button" aria-label="View image: Untitled III">
+            <div class="gallery-img" style="background-color: var(--gallery-placeholder-3); aspect-ratio: 1/1;">
+              <svg viewBox="0 0 100 100" aria-hidden="true" class="gallery-placeholder-svg">
+                <circle cx="50" cy="50" r="30" fill="none" stroke="var(--text-light)" stroke-width="1"/>
+                <circle cx="50" cy="50" r="15" fill="none" stroke="var(--text-light)" stroke-width="0.5"/>
+              </svg>
+            </div>
+            <figcaption class="gallery-caption">Untitled III</figcaption>
+          </figure>
+          <figure class="gallery-item stagger" tabindex="0" role="button" aria-label="View image: Untitled IV">
+            <div class="gallery-img" style="background-color: var(--gallery-placeholder-1); aspect-ratio: 5/4;">
+              <svg viewBox="0 0 125 100" aria-hidden="true" class="gallery-placeholder-svg">
+                <path d="M10 80 Q30 30 62 50 Q95 70 115 20" fill="none" stroke="var(--text-light)" stroke-width="1" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <figcaption class="gallery-caption">Untitled IV</figcaption>
+          </figure>
+          <figure class="gallery-item stagger" tabindex="0" role="button" aria-label="View image: Untitled V">
+            <div class="gallery-img" style="background-color: var(--gallery-placeholder-2); aspect-ratio: 3/5;">
+              <svg viewBox="0 0 75 125" aria-hidden="true" class="gallery-placeholder-svg">
+                <path d="M37 20 L20 100 M37 20 L55 100 M28 65 L47 65" fill="none" stroke="var(--text-light)" stroke-width="1" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <figcaption class="gallery-caption">Untitled V</figcaption>
+          </figure>
+          <figure class="gallery-item stagger" tabindex="0" role="button" aria-label="View image: Untitled VI">
+            <div class="gallery-img" style="background-color: var(--gallery-placeholder-3); aspect-ratio: 4/3;">
+              <svg viewBox="0 0 120 90" aria-hidden="true" class="gallery-placeholder-svg">
+                <path d="M15 70 L35 30 L55 55 L75 25 L105 70" fill="none" stroke="var(--text-light)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <figcaption class="gallery-caption">Untitled VI</figcaption>
+          </figure>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <p>&copy; 2025 Boshen Lin. Built with passion.</p>
-        </div>
-    </footer>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+      <button class="lightbox-close" aria-label="Close image viewer">&times;</button>
+      <button class="lightbox-prev" aria-label="Previous image">
+        <svg viewBox="0 0 24 24" width="24" height="24"><path d="M15 4 L7 12 L15 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="lightbox-content">
+        <div class="lightbox-img"></div>
+        <p class="lightbox-caption"></p>
+      </div>
+      <button class="lightbox-next" aria-label="Next image">
+        <svg viewBox="0 0 24 24" width="24" height="24"><path d="M9 4 L17 12 L9 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
 
-    <script src="script.js"></script>
+    <!-- Favorites -->
+    <section id="page-favorites" class="page" role="tabpanel" aria-labelledby="tab-favorites">
+      <div class="page-content favorites-page">
+        <div class="page-header">
+          <h2 class="page-title stagger">Favorites</h2>
+          <svg class="hand-drawn-divider" viewBox="0 0 120 8" width="120" height="8" aria-hidden="true">
+            <path d="M0 4 Q30 0 60 4 Q90 8 120 4" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="favorites-section stagger">
+          <h3 class="favorites-category">Books</h3>
+          <div class="favorites-row">
+            <div class="favorite-item">
+              <div class="favorite-cover" style="background-color: var(--fav-cover-1);">
+                <svg viewBox="0 0 60 90" aria-hidden="true" class="favorite-placeholder-svg">
+                  <rect x="10" y="10" width="40" height="70" fill="none" stroke="var(--text-light)" stroke-width="0.8"/>
+                  <line x1="15" y1="30" x2="45" y2="30" stroke="var(--text-light)" stroke-width="0.5"/>
+                  <line x1="15" y1="36" x2="35" y2="36" stroke="var(--text-light)" stroke-width="0.5"/>
+                </svg>
+              </div>
+              <span class="favorite-title">Meditations</span>
+            </div>
+            <div class="favorite-item">
+              <div class="favorite-cover" style="background-color: var(--fav-cover-2);">
+                <svg viewBox="0 0 60 90" aria-hidden="true" class="favorite-placeholder-svg">
+                  <rect x="10" y="10" width="40" height="70" fill="none" stroke="var(--text-light)" stroke-width="0.8"/>
+                  <line x1="15" y1="30" x2="45" y2="30" stroke="var(--text-light)" stroke-width="0.5"/>
+                  <line x1="15" y1="36" x2="35" y2="36" stroke="var(--text-light)" stroke-width="0.5"/>
+                </svg>
+              </div>
+              <span class="favorite-title">Siddhartha</span>
+            </div>
+            <div class="favorite-item">
+              <div class="favorite-cover" style="background-color: var(--fav-cover-3);">
+                <svg viewBox="0 0 60 90" aria-hidden="true" class="favorite-placeholder-svg">
+                  <rect x="10" y="10" width="40" height="70" fill="none" stroke="var(--text-light)" stroke-width="0.8"/>
+                  <line x1="15" y1="30" x2="45" y2="30" stroke="var(--text-light)" stroke-width="0.5"/>
+                  <line x1="15" y1="36" x2="35" y2="36" stroke="var(--text-light)" stroke-width="0.5"/>
+                </svg>
+              </div>
+              <span class="favorite-title">Sapiens</span>
+            </div>
+            <div class="favorite-item">
+              <div class="favorite-cover" style="background-color: var(--fav-cover-1);">
+                <svg viewBox="0 0 60 90" aria-hidden="true" class="favorite-placeholder-svg">
+                  <rect x="10" y="10" width="40" height="70" fill="none" stroke="var(--text-light)" stroke-width="0.8"/>
+                  <line x1="15" y1="30" x2="45" y2="30" stroke="var(--text-light)" stroke-width="0.5"/>
+                  <line x1="15" y1="36" x2="35" y2="36" stroke="var(--text-light)" stroke-width="0.5"/>
+                </svg>
+              </div>
+              <span class="favorite-title">Dune</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="favorites-section stagger">
+          <h3 class="favorites-category">Films</h3>
+          <div class="favorites-row">
+            <div class="favorite-item">
+              <div class="favorite-cover favorite-cover-landscape" style="background-color: var(--fav-cover-2);">
+                <svg viewBox="0 0 90 60" aria-hidden="true" class="favorite-placeholder-svg">
+                  <polygon points="35,20 35,45 55,32" fill="none" stroke="var(--text-light)" stroke-width="0.8"/>
+                </svg>
+              </div>
+              <span class="favorite-title">In the Mood for Love</span>
+            </div>
+            <div class="favorite-item">
+              <div class="favorite-cover favorite-cover-landscape" style="background-color: var(--fav-cover-3);">
+                <svg viewBox="0 0 90 60" aria-hidden="true" class="favorite-placeholder-svg">
+                  <polygon points="35,20 35,45 55,32" fill="none" stroke="var(--text-light)" stroke-width="0.8"/>
+                </svg>
+              </div>
+              <span class="favorite-title">Stalker</span>
+            </div>
+            <div class="favorite-item">
+              <div class="favorite-cover favorite-cover-landscape" style="background-color: var(--fav-cover-1);">
+                <svg viewBox="0 0 90 60" aria-hidden="true" class="favorite-placeholder-svg">
+                  <polygon points="35,20 35,45 55,32" fill="none" stroke="var(--text-light)" stroke-width="0.8"/>
+                </svg>
+              </div>
+              <span class="favorite-title">The Grand Budapest Hotel</span>
+            </div>
+            <div class="favorite-item">
+              <div class="favorite-cover favorite-cover-landscape" style="background-color: var(--fav-cover-2);">
+                <svg viewBox="0 0 90 60" aria-hidden="true" class="favorite-placeholder-svg">
+                  <polygon points="35,20 35,45 55,32" fill="none" stroke="var(--text-light)" stroke-width="0.8"/>
+                </svg>
+              </div>
+              <span class="favorite-title">2001: A Space Odyssey</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="favorites-section stagger">
+          <h3 class="favorites-category">Music</h3>
+          <div class="favorites-row">
+            <div class="favorite-item">
+              <div class="favorite-cover" style="background-color: var(--fav-cover-3); aspect-ratio: 1/1;">
+                <svg viewBox="0 0 60 60" aria-hidden="true" class="favorite-placeholder-svg">
+                  <circle cx="30" cy="30" r="20" fill="none" stroke="var(--text-light)" stroke-width="0.8"/>
+                  <circle cx="30" cy="30" r="5" fill="none" stroke="var(--text-light)" stroke-width="0.8"/>
+                </svg>
+              </div>
+              <span class="favorite-title">Kid A</span>
+            </div>
+            <div class="favorite-item">
+              <div class="favorite-cover" style="background-color: var(--fav-cover-1); aspect-ratio: 1/1;">
+                <svg viewBox="0 0 60 60" aria-hidden="true" class="favorite-placeholder-svg">
+                  <circle cx="30" cy="30" r="20" fill="none" stroke="var(--text-light)" stroke-width="0.8"/>
+                  <circle cx="30" cy="30" r="5" fill="none" stroke="var(--text-light)" stroke-width="0.8"/>
+                </svg>
+              </div>
+              <span class="favorite-title">Blue Train</span>
+            </div>
+            <div class="favorite-item">
+              <div class="favorite-cover" style="background-color: var(--fav-cover-2); aspect-ratio: 1/1;">
+                <svg viewBox="0 0 60 60" aria-hidden="true" class="favorite-placeholder-svg">
+                  <circle cx="30" cy="30" r="20" fill="none" stroke="var(--text-light)" stroke-width="0.8"/>
+                  <circle cx="30" cy="30" r="5" fill="none" stroke="var(--text-light)" stroke-width="0.8"/>
+                </svg>
+              </div>
+              <span class="favorite-title">Blonde</span>
+            </div>
+            <div class="favorite-item">
+              <div class="favorite-cover" style="background-color: var(--fav-cover-3); aspect-ratio: 1/1;">
+                <svg viewBox="0 0 60 60" aria-hidden="true" class="favorite-placeholder-svg">
+                  <circle cx="30" cy="30" r="20" fill="none" stroke="var(--text-light)" stroke-width="0.8"/>
+                  <circle cx="30" cy="30" r="5" fill="none" stroke="var(--text-light)" stroke-width="0.8"/>
+                </svg>
+              </div>
+              <span class="favorite-title">Vespertine</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="page-contact" class="page" role="tabpanel" aria-labelledby="tab-contact">
+      <div class="page-content contact-page">
+        <div class="contact-centered">
+          <svg class="contact-illustration" viewBox="0 0 120 80" width="120" height="80" aria-hidden="true">
+            <!-- Envelope -->
+            <rect x="10" y="15" width="100" height="55" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M10 15 L60 48 L110 15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 70 L45 42" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+            <path d="M110 70 L75 42" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+          <h2 class="page-title stagger">Get in Touch</h2>
+          <svg class="hand-drawn-divider" viewBox="0 0 120 8" width="120" height="8" aria-hidden="true">
+            <path d="M0 4 Q30 0 60 4 Q90 8 120 4" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <p class="contact-text stagger">I'd love to hear from you — whether it's about research, a project idea, or just to say hello.</p>
+          <div class="contact-links stagger">
+            <a href="mailto:hello@Boshenlin.com" class="text-link">hello@Boshenlin.com</a>
+          </div>
+          <div class="contact-social stagger">
+            <a href="#" class="social-link" target="_blank" rel="noopener">GitHub</a>
+            <span class="link-sep">/</span>
+            <a href="#" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="link-sep">/</span>
+            <a href="#" class="social-link" target="_blank" rel="noopener">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Boshen Lin</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
