@@ -5,31 +5,50 @@
   // Router
   // ========================================
 
-  const pages = document.querySelectorAll('.page');
   const navLinks = document.querySelectorAll('.nav-link');
   const navToggle = document.querySelector('.nav-toggle');
   const navLinksContainer = document.querySelector('.nav-links');
   const nav = document.querySelector('.nav');
+  const scrollTrack = document.getElementById('scroll-track');
+  const scrollViewport = document.querySelector('.scroll-viewport');
+  const allPages = Array.from(scrollTrack.querySelectorAll('.page'));
+
+  // Active page order (matches DOM order of .page sections)
+  const pageOrder = ['about', 'research', 'projects', 'experience',
+    /* 'blog', 'gallery', 'favorites', */ 'contact'];
+
+  // Build index map: pageId -> panel index in DOM
+  const pageIndexMap = {};
+  allPages.forEach((page, i) => {
+    const id = page.id.replace('page-', '');
+    pageIndexMap[id] = i;
+  });
+
+  // Map active tabs to painting position (evenly distributed 0%–100%)
+  const bgPositions = {};
+  pageOrder.forEach((id, i) => {
+    bgPositions[id] = (i / (pageOrder.length - 1)) * 100 + '%';
+  });
+
+  let currentPageId = null;
 
   function getPageId(hash) {
     const id = hash.replace('#', '') || 'about';
-    const validPages = ['about', 'research', 'projects', 'experience', /* 'blog', 'gallery', 'favorites', */ 'contact'];
-    return validPages.includes(id) ? id : 'about';
+    return pageOrder.includes(id) ? id : 'about';
   }
 
   function navigateTo(pageId, pushState) {
-    // Hide current page
-    const currentPage = document.querySelector('.page.active');
-    if (currentPage) {
-      currentPage.classList.remove('visible');
-      // Wait for fade-out, then switch
-      setTimeout(() => {
-        currentPage.classList.remove('active');
-        showPage(pageId);
-      }, 200);
-    } else {
-      showPage(pageId);
-    }
+    if (pageId === currentPageId) return;
+
+    const index = pageIndexMap[pageId];
+    if (index === undefined) return;
+
+    // Slide the track (content) and shift the painting
+    scrollTrack.style.transform = 'translateX(-' + (index * 100) + 'vw)';
+    scrollViewport.style.backgroundPositionX = bgPositions[pageId];
+
+    // Reset scroll position of target panel
+    allPages[index].scrollTop = 0;
 
     // Update nav links
     navLinks.forEach(link => {
@@ -39,6 +58,9 @@
       link.setAttribute('aria-selected', isActive);
     });
 
+    // Trigger stagger animations on the target page
+    animateStaggerElements(allPages[index]);
+
     // Close mobile nav
     closeMobileNav();
 
@@ -46,24 +68,8 @@
     if (pushState !== false) {
       history.replaceState(null, '', '#' + pageId);
     }
-  }
 
-  function showPage(pageId) {
-    const page = document.getElementById('page-' + pageId);
-    if (!page) return;
-
-    page.classList.add('active');
-
-    // Trigger reflow for transition
-    page.offsetHeight;
-
-    requestAnimationFrame(() => {
-      page.classList.add('visible');
-      animateStaggerElements(page);
-    });
-
-    // Scroll to top
-    window.scrollTo(0, 0);
+    currentPageId = pageId;
   }
 
   // ========================================
@@ -76,7 +82,7 @@
       el.classList.remove('animate-in');
       setTimeout(() => {
         el.classList.add('animate-in');
-      }, 100 + i * 80);
+      }, 200 + i * 80);
     });
   }
 
@@ -105,14 +111,12 @@
 
   navToggle.addEventListener('click', toggleMobileNav);
 
-  // Close mobile nav on link click
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       closeMobileNav();
     });
   });
 
-  // Close mobile nav on outside click
   document.addEventListener('click', (e) => {
     if (!nav.contains(e.target)) {
       closeMobileNav();
@@ -194,7 +198,6 @@
     const imgEl = item.querySelector('.gallery-img');
     const caption = item.querySelector('.gallery-caption');
 
-    // Clone the placeholder content for the lightbox
     lightboxImg.innerHTML = imgEl.innerHTML;
     lightboxImg.style.backgroundColor = window.getComputedStyle(imgEl).backgroundColor;
     lightboxImg.style.aspectRatio = window.getComputedStyle(imgEl).aspectRatio;
@@ -225,7 +228,6 @@
   lightboxPrev.addEventListener('click', prevImage);
   lightboxNext.addEventListener('click', nextImage);
 
-  // Keyboard navigation for lightbox
   document.addEventListener('keydown', (e) => {
     if (lightbox.hidden) return;
 
@@ -242,7 +244,6 @@
     }
   });
 
-  // Close lightbox on backdrop click
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) {
       closeLightbox();
@@ -276,7 +277,17 @@
   // Initial Load
   // ========================================
 
+  // No transition on first load
+  scrollTrack.style.transition = 'none';
+  scrollViewport.style.transition = 'none';
   const initialPage = getPageId(window.location.hash);
   navigateTo(initialPage, false);
+  // Re-enable transitions after first paint
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      scrollTrack.style.transition = '';
+      scrollViewport.style.transition = '';
+    });
+  });
 
 })();
